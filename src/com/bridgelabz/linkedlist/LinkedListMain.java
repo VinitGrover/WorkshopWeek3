@@ -10,5 +10,11 @@ public class LinkedListMain {
 
         myList.print();
 
+        myList.addAfter(32, 59);
+
+        System.out.println();
+
+        myList.print();
+
     }
 }

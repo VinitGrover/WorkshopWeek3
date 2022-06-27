@@ -20,4 +20,28 @@ public class LinkedList<K> {
             temporaryNode = temporaryNode.next;
         }
     }
+
+    public void addAfter(K searchNode, K key) {
+        Node<K> nodeFound = search(searchNode);
+        Node<K> newConnectionNode = new Node<>(key);
+
+        if(nodeFound != null){
+            newConnectionNode.next = nodeFound.next;
+            nodeFound.next = newConnectionNode;
+        }
+    }
+
+    private Node<K> search(K searchNode) {
+        Node<K> temp = head;
+        Node<K> nodeFound = null;
+
+        while(temp != null){
+            if(temp.key == searchNode){
+                nodeFound = temp;
+                break;
+            }
+            temp = temp.next;
+        }
+        return nodeFound;
+    }
 }
