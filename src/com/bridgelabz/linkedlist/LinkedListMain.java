@@ -8,5 +8,7 @@ public class LinkedListMain {
         myList.append(32);
         myList.append(44);
 
+        myList.print();
+
     }
 }

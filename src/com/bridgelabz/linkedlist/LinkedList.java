@@ -13,4 +13,11 @@ public class LinkedList<K> {
         tail = newNode;
     }
 
+    public void print() {
+        Node<K> temporaryNode = head;
+        while(temporaryNode != null){
+            System.out.print(temporaryNode.key+ " ");
+            temporaryNode = temporaryNode.next;
+        }
+    }
 }
